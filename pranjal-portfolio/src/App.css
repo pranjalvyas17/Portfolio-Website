@@ -1,0 +1,570 @@
+body {
+  margin: 0;
+  background-color: #05070a; /* Matches the particles background */
+  color: #e6edf3; /* Light grey text for readability */
+}
+
+/* Ensure all sections stay transparent to see the background */
+section {
+  background-color: transparent !important;
+}
+
+/* Optional: Make your Navbar slightly darker to stand out */
+.navbar {
+  background: rgba(5, 7, 10, 0.85); /* Same color but with transparency */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #30363d; /* Subtle divider */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(22, 27, 34, 0.95); /* Semi-transparent */
+  backdrop-filter: blur(10px);
+  z-index: 1000; /* Ensures it stays above particles */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.navbar li:hover {
+  color: #00d4ff; /* Highlight color on hover */
+}
+
+.hero{
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:60px;
+  letter-spacing:1px;
+}
+
+.name{
+  background: linear-gradient(90deg,#38bdf8,#60a5fa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:600;
+}
+
+.typing{
+  font-size:24px;
+  margin-top:15px;
+}
+
+.resume-btn{
+  margin-top:30px;
+  padding:14px 30px;
+  border:none;
+  border-radius:10px;
+  background:#38bdf8;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.resume-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(56,189,248,0.4);
+}
+.skills{
+  padding:80px 120px;
+  text-align:center;
+}
+
+.skills h2{
+  margin-bottom:50px;
+}
+
+/* Grid */
+.skills-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+/* Card */
+.skill-card{
+  width:250px;
+  height:180px;
+  perspective:1000px;
+}
+
+/* Inner flip */
+.card-inner{
+  width:100%;
+  height:100%;
+  position:relative;
+  transition:transform 0.6s;
+  transform-style:preserve-3d;
+}
+
+.skill-card:hover .card-inner{
+  transform:rotateY(180deg);
+}
+
+/* Front & Back */
+.card-front, .card-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* Front */
+.card-front{
+  background:#020617;
+  border:1px solid #1e293b;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  gap:18px;            /* increase spacing */
+  padding:25px;        /* add breathing space */
+}
+
+
+.card-front svg{
+  color:#38bdf8;
+  font-size:45px;
+  margin-bottom:5px;   /* 👈 key spacing */
+}
+
+.card-front h3{
+  margin:0;
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+/* Back */
+.card-back{
+  background:#38bdf8;
+  color:black;
+  transform:rotateY(180deg);
+  font-size:14px;
+}
+
+.bar{
+  height:10px;
+  background:#1e293b;
+  border-radius:10px;
+}
+
+.bar span{
+  display:block;
+  height:10px;
+  background:#38bdf8;
+  border-radius:10px;
+  animation:loadSkill 2s ease-in-out;
+}
+
+@keyframes loadSkill{
+  from{
+    width:0;
+  }
+}
+.projects{
+ padding:80px;
+}
+
+.project-container{
+ display:flex;
+ gap:30px;
+ justify-content:center;
+}
+
+.card{
+ background:#020617;
+ padding:25px;
+ border-radius:10px;
+ width:250px;
+ text-align:center;
+ transition:0.3s;
+}
+
+.card:hover{
+ transform:translateY(-10px);
+}
+
+.card button{
+ margin-top:10px;
+}
+.card{
+ background:#020617;
+ padding:25px;
+ border-radius:10px;
+ width:250px;
+ text-align:center;
+ transition:0.3s;
+ border:1px solid transparent;
+}
+
+.card:hover{
+ transform:translateY(-10px);
+ border:1px solid #38bdf8;
+ box-shadow:0 0 20px #38bdf8;
+}
+.footer{
+ text-align:center;
+ padding:30px;
+ background:#020617;
+ margin-top:60px;
+}
+.hero,
+.navbar,
+.skills,
+.projects{
+ position:relative;
+ z-index:1;
+}
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #020617, #0f172a, #020617, #1e293b);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+html{
+scroll-behavior:smooth;
+}
+canvas {
+  position: fixed !important;
+  z-index: -1 !important; /* Forces background behind everything */
+  top: 0;
+  left: 0;
+}
+
+section {
+  position: relative;
+  z-index: 1; /* Keeps content above particles */
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image img {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.contact-section {
+  padding: 80px 5%;
+  color: white;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05); /* Glass effect */
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* Fixes the "squashed" left side */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Fixes the congested links */
+.contact-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #00d4ff !important; /* Forces the color to blue */
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.contact-link-item:hover {
+  transform: translateX(10px);
+}
+
+/* Fixes the Form on the right */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background: #00d4ff;
+  color: black;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+/* Force the particles to stay behind everything */
+/* This ensures the particles container doesn't scroll away */
+#tsparticles {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* IMPORTANT: 
+   If your About.js or Contact.js components have their own 
+   background colors, change them to 'transparent' or 
+   remove them so the particles show through.
+*/
+.about-section, .contact-section, .skills-section {
+  background: transparent !important;
+  position: relative;
+  z-index: 1; /* Keeps your text and buttons clickable and on top */
+}
+
+/* Optional: Add a subtle overlay if the background makes text hard to read */
+section {
+  backdrop-filter: blur(2px); /* Optional: adds a nice glass effect */
+}
+/* 1. Make the particles stay fixed in the very back */
+#tsparticles {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1 !important;
+}
+
+/* 2. Force ALL sections to be transparent so you can see through them */
+section, 
+.hero-section, 
+.about-section, 
+.skills-section, 
+.contact-section,
+#hero, #about, #skills, #projects, #contact {
+  background-color: transparent !important;
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. Ensure the main body is the dark color you wanted */
+body {
+  margin: 0;
+  background-color: #05070a !important; /* The Dark Anti-Gravity color */
+}
+/* --- About Section Container --- */
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  background: transparent; /* Ensures particles are visible */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  background: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* --- Image Styling --- */
+.about-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img-png {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+/* --- Text Content --- */
+.about-text-content {
+  flex: 1.5;
+  color: #fff;
+}
+
+.about-text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00d4ff;
+}
+
+.about-text-content p {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* --- Button Equalization --- */
+.about-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.contact-btn, .resume-btn {
+  /* Dimensions must be identical */
+  width: 150px;
+  height: 48px;
+  
+  /* Flex centering makes text align perfectly in both types of tags */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-sizing: border-box; /* Includes border in the width calculation */
+}
+
+.contact-btn {
+  background: #00d4ff;
+  color: #05070a;
+  border: none;
+}
+
+.resume-btn {
+  background: transparent;
+  color: #00d4ff;
+  border: 2px solid #00d4ff;
+}
+
+.contact-btn:hover, .resume-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+/* --- Responsive Layout for Mobile --- */
+@media (max-width: 850px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .about-buttons {
+    justify-content: center;
+  }
+}
