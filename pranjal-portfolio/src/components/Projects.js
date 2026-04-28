@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 function Projects(){
  return(
@@ -10,15 +11,15 @@ function Projects(){
  <div className="project-container">
 
  <div className="card">
- <h3>Secure File Transfer</h3>
- <p>Encryption based secure file sharing system</p>
- <button>GitHub</button>
+ <h3>Internskill</h3>
+ <p>Virtual Internship Portal with skill tracking and incentives system using Blockchain</p>
+ <a href="https://pranjalvyas17.github.io/INTERNSKILL/" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
  </div>
 
  <div className="card">
- <h3>Blockchain Voting</h3>
- <p>Secure voting using blockchain</p>
- <button>GitHub</button>
+ <h3>Portfolio Website</h3>
+ <p>A modern and responsive personal portfolio website built with React.js, showcases to highlight my work in web development, Python, and blockchain.</p>
+ <a href="https://pranjalvyas17.github.io/INTERNSKILL/" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
  </div>
 
  </div>
