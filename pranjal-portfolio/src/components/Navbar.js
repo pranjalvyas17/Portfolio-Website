@@ -5,7 +5,7 @@ import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope } from "react-icon
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>Pranjal Vyas</h2>
+      <h2>Pranjal Portfolio Website</h2>
 
       <ul>
         <li>

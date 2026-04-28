@@ -516,29 +516,33 @@ body {
 .about-buttons {
   margin-top: 30px;
   display: flex;
+  align-items: center; /* ensures same vertical alignment */
   gap: 20px;
 }
 
-.contact-btn, .resume-btn {
-  /* Dimensions must be identical */
+/* Make BOTH elements behave identically */
+.contact-btn,
+.resume-btn {
   width: 150px;
   height: 48px;
-  
-  /* Flex centering makes text align perfectly in both types of tags */
-  display: flex;
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  
+
   border-radius: 8px;
-  font-family: inherit;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
   text-decoration: none;
-  box-sizing: border-box; /* Includes border in the width calculation */
+
+  box-sizing: border-box; /* 🔥 IMPORTANT */
 }
 
+.resume-btn {
+  position: relative;
+  top: -14px; /* or try -2px / +1px depending */
+}
 .contact-btn {
   background: #00d4ff;
   color: #05070a;
