@@ -19,15 +19,9 @@ const options = {
       enable: true, 
       zIndex: -1 
     },
-    background: {
-      color: {
-        value: "transparent", // Change this to transparent so the CSS body color shows through
-      },
-    },
-    // ... your other particles settings
     
     fpsLimit: 120,
-    background: { color: { value: "#0d1117" } }, 
+    background: { color: { value: "#0d1117" } }, // Dark background
     interactivity: {
       events: {
         onClick: { enable: true, mode: "push" },
