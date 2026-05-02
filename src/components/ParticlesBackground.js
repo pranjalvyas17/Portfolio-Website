@@ -27,8 +27,7 @@ const options = {
     // ... your other particles settings
     
     fpsLimit: 120,
-    background: { color: { value: "#0d1117" } }, // Dark background
-    fpsLimit: 120,
+    background: { color: { value: "#0d1117" } }, 
     interactivity: {
       events: {
         onClick: { enable: true, mode: "push" },
