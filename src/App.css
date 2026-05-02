@@ -20,10 +20,17 @@ section {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(22, 27, 34, 0.95); /* Semi-transparent */
   backdrop-filter: blur(10px);
   z-index: 1000; /* Ensures it stays above particles */
