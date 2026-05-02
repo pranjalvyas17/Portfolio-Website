@@ -19,7 +19,7 @@ function Projects(){
  <div className="card">
  <h3>Portfolio Website</h3>
  <p>A modern and responsive personal portfolio website built with React.js, showcases to highlight my work in web development, Python, and blockchain.</p>
- <a href="https://pranjalvyas17.github.io/INTERNSKILL/" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
+ <a href="https://pranjal-portfolio-website.vercel.app/" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
  </div>
 
  </div>
