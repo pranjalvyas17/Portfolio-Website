@@ -7,7 +7,7 @@ function Hero() {
 
       <p>BTech CSE | Developer | Blockchain Enthusiast</p>
 
-      <button className="resume-btn">Download Resume</button>
+      <a href="/Pranjal_Resume.pdf" download className="resume-btn">Download Resume</a>
     </section>
   );
 }
