@@ -551,9 +551,28 @@ body {
   top: -14px; /* or try -2px / +1px depending */
 }
 .contact-btn {
-  background: #00d4ff;
-  color: #05070a;
-  border: none;
+  padding: 14px 32px;
+  border: 2px solid #38bdf8;
+  border-radius: 14px;
+  background: transparent;
+  color: #38bdf8;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+}
+
+.contact-btn:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
 }
 
 .resume-btn {

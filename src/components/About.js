@@ -29,7 +29,7 @@ const About = () => {
           
           <div className="about-buttons">
             <Link to="contact" smooth={true} duration={500} offset={-70}>
-  <button className="hire-btn">Hire Me</button>
+  <button className="contact-btn">Hire Me</button>
 </Link>
             <a href="/Pranjal_Resume.pdf" download className="resume-btn">Resume</a>
           </div>
