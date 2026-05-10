@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-scroll";
 import myPhoto from './profile.png'; // Direct import
 
 
@@ -27,7 +28,9 @@ const About = () => {
           </p>
           
           <div className="about-buttons">
-            <button className="contact-btn">Hire Me</button>
+            <Link to="contact" smooth={true} duration={500} offset={-70}>
+  <button className="hire-btn">Hire Me</button>
+</Link>
             <a href="/Pranjal_Resume.pdf" download className="resume-btn">Resume</a>
           </div>
         </div>
