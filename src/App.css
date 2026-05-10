@@ -579,3 +579,11 @@ body {
     justify-content: center;
   }
 }
+.hire-btn {
+  transition: 0.3s ease;
+}
+
+.hire-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
